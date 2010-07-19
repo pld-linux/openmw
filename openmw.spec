@@ -10,7 +10,7 @@ License:	GPL v3+
 Group:		Applications/Emulators
 Source0:	http://downloads.sourceforge.net/openmw/%{name}-%{version}.tar.bz2
 # Source0-md5:	c40c80069c006b1e893fc74dcbefb3d9
-URL:		http://openmw.sourceforge.net/
+URL:		http://openmw.com/
 BuildRequires:	cmake
 BuildRequires:	ogre-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
