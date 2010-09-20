@@ -1,0 +1,15 @@
+--- openmw-0.08/CMakeLists.txt~	2010-09-07 19:52:54.000000000 +0200
++++ openmw-0.08/CMakeLists.txt	2010-09-20 13:27:11.675345282 +0200
+@@ -246,9 +246,9 @@
+ endif (APPLE)
+ 
+ # Compiler settings
+-if (CMAKE_COMPILER_IS_GNUCC)
+-    add_definitions (-Wall -Werror)
+-endif (CMAKE_COMPILER_IS_GNUCC)
++#if (CMAKE_COMPILER_IS_GNUCC)
++#    add_definitions (-Wall -Werror)
++#endif (CMAKE_COMPILER_IS_GNUCC)
+ 
+ # Apple bundling
+ if (APPLE)
