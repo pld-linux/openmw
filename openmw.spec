@@ -2,20 +2,20 @@
 # TODO: BRs, install files
 #
 Summary:	Morrowind reimplementation
-Summary(pl.UTF-8):	Reimplemantacja gry Morrowind
+Summary(pl.UTF-8):	Reimplementacja gry Morrowind
 Name:		openmw
-Version:	0.08
+Version:	0.9.0
 Release:	0.1
 License:	GPL v3+
 Group:		Applications/Emulators
-Source0:	http://downloads.sourceforge.net/openmw/%{name}-%{version}.1-source.tar.bz2
-# Source0-md5:	f07e77fc1354b3a9b511f3a71194af1b
+Source0:	http://openmw.googlecode.com/files/%{name}-%{version}-source.tar.bz2
+# Source0-md5:	025b2d88c8ed29d31590d75c0ead2bdd
 Patch0:		%{name}-werror.patch
 URL:		http://openmw.com/
 BuildRequires:	cmake
 BuildRequires:	libmpg123-devel
 BuildRequires:	ogre-devel
-BuildRequires:	rpmbuild(macros) >= 1.577
+BuildRequires:	rpmbuild(macros) >= 1.600
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -30,7 +30,7 @@ posiadać oryginalną kopię Morrowind jeżeli chce używać tego
 oprogramowania.
 
 %prep
-%setup -q
+%setup -q -n %{name}-%{version}-source
 %patch0 -p1
 
 %build
@@ -44,7 +44,7 @@ cd build
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_bindir}
 
-install build/openmw $RPM_BUILD_ROOT%{_bindir}
+cp -a build/openmw $RPM_BUILD_ROOT%{_bindir}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
