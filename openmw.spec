@@ -1,20 +1,23 @@
 #
-# TODO: BRs, install files
+# TODO: install files
 #
 Summary:	Morrowind reimplementation
 Summary(pl.UTF-8):	Reimplementacja gry Morrowind
 Name:		openmw
-Version:	0.9.0
+Version:	0.10.0
 Release:	0.1
 License:	GPL v3+
 Group:		Applications/Emulators
 Source0:	http://openmw.googlecode.com/files/%{name}-%{version}-source.tar.bz2
-# Source0-md5:	025b2d88c8ed29d31590d75c0ead2bdd
+# Source0-md5:	cc266764dd83932d9e230143c1aaa5a1
 Patch0:		%{name}-werror.patch
 URL:		http://openmw.com/
+BuildRequires:	bullet-devel
 BuildRequires:	cmake
 BuildRequires:	libmpg123-devel
+BuildRequires:	libsndfile-devel
 BuildRequires:	ogre-devel
+BuildRequires:	ois-devel
 BuildRequires:	rpmbuild(macros) >= 1.600
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
